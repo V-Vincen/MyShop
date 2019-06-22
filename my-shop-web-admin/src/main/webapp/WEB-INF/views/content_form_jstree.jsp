@@ -107,7 +107,7 @@
                                     <label for="pic" class="col-sm-2 control-label">Pic</label>
 
                                     <div class="col-sm-8">
-                                        <form:hidden path="pic" cssClass="form-control" placeholder="Enter Pic" />
+                                        <form:input path="pic" cssClass="form-control" placeholder="Enter Pic" />
                                         <div id="dropz" class="dropzone" style="border: 2px dashed #0087F7;border-radius: 5px;background: white;">
                                             <div class="dz-message needsclick">
                                                 Drop files here or click to upload.
@@ -120,7 +120,7 @@
                                     <label for="pic2" class="col-sm-2 control-label">Pic2</label>
 
                                     <div class="col-sm-8">
-                                        <form:hidden path="pic2" cssClass="form-control" placeholder="Enter Pic2" />
+                                        <form:input path="pic2" cssClass="form-control" placeholder="Enter Pic2" />
                                         <div id="dropz2" class="dropzone" style="border: 2px dashed #0087F7;border-radius: 5px;background: white;">
                                             <div class="dz-message needsclick">
                                                 Drop files here or click to upload.

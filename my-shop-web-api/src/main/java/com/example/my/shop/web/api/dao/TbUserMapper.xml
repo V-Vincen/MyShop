@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.my.shop.web.api.dao.TbUserMapper">
+
+    <insert id="insert" parameterType="com.example.my.shop.web.api.web.dto.TbUser">
+        insert into tb_user (
+            username,
+            password,
+            phone,
+            email,
+            created,
+            updated)
+        values (
+            #{username,jdbcType=VARCHAR},
+            #{password,jdbcType=VARCHAR},
+            #{phone,jdbcType=VARCHAR},
+            #{email,jdbcType=VARCHAR},
+            #{created,jdbcType=TIMESTAMP},
+            #{updated,jdbcType=TIMESTAMP})
+     </insert>
+
+
+</mapper>

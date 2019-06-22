@@ -43,6 +43,8 @@
 
         <fastjson.version>1.2.47</fastjson.version>
         <hibernate-validator.version>5.3.4.Final</hibernate-validator.version>
+
+        <apache-httpclient.version>4.5.6</apache-httpclient.version>
     </properties>
 
     <dependencyManagement>
@@ -176,7 +178,7 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
-                <scope>provided</scope>
+                <!--<scope>provided</scope>-->
             </dependency>
             <!-- Lombok End-->
 
@@ -198,7 +200,7 @@
             </dependency>
             <!-- Json End -->
 
-            <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
+            <!-- pagehelper Begin -->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper</artifactId>
@@ -206,12 +208,30 @@
             </dependency>
             <!-- Pagehelper End -->
 
-            <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+            <!-- fastjson Begin -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
+
+            <!-- Apache Http Begin -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${apache-httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>fluent-hc</artifactId>
+                <version>${apache-httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpmime</artifactId>
+                <version>${apache-httpclient.version}</version>
+            </dependency>
+            <!-- Apache Http End -->
 
         </dependencies>
     </dependencyManagement>

@@ -49,17 +49,19 @@ public class UploadController {
             e.printStackTrace();
         }
 
+
+        //scheme:服务端提供的协议 http/https
+        //serverName:服务器名称 localhost/ip/domain
+        //serverPort:服务器端口号
+        String serverPath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort();
+
         //dropzone插件图片上传
         if (dropzFile != null) {
             // 返回 JSON 数据，这里只带入了文件名
-            result.put("fileName", UPLOAD_PATH + file.getName());
+            result.put("fileName", serverPath + UPLOAD_PATH + file.getName());
         }
         //wangEditor插件图片上传
         else {
-            //scheme:服务端提供的协议 http/https
-            //serverName:服务器名称 localhost/ip/domain
-            //serverPort:服务器端口号
-            String serverPath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort();
             result.put("errno", 0);
             result.put("data", new String[]{serverPath + UPLOAD_PATH + file.getName()});
         }
