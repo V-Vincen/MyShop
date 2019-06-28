@@ -45,6 +45,7 @@
         <hibernate-validator.version>5.3.4.Final</hibernate-validator.version>
 
         <apache-httpclient.version>4.5.6</apache-httpclient.version>
+        <kaptcha.version>2.3</kaptcha.version>
     </properties>
 
     <dependencyManagement>
@@ -233,10 +234,28 @@
             </dependency>
             <!-- Apache Http End -->
 
+            <!-- kaptcha Begin -->
+            <dependency>
+                <groupId>com.google.code.kaptcha</groupId>
+                <artifactId>kaptcha</artifactId>
+                <version>${kaptcha.version}</version>
+            </dependency>
+            <!-- kaptcha End -->
+
         </dependencies>
     </dependencyManagement>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
         <plugins>
             <!-- Compiler 插件, 设定 JDK 版本 -->
             <plugin>
@@ -250,6 +269,7 @@
                     <showWarnings>true</showWarnings>
                 </configuration>
             </plugin>
+
         </plugins>
 
         <!-- 资源文件配置 -->

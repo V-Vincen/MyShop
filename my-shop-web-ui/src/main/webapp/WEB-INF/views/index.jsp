@@ -77,7 +77,7 @@
             </li>
         </ul>
         <ul class="header-right">
-            <li class="denglu">Hi~<a class="red" href="dengl.html">请登录!</a> <a href="/register">[免费注册]</a></li>
+            <li class="denglu">Hi~<a class="red" href="dengl.html">请登录!</a> <a href="/registerJsp">[免费注册]</a></li>
             <li class="shu"></li>
             <li class="denglu"><a class="ing_ps" href="#">我的收藏</a></li>
             <li class="shu"></li>

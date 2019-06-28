@@ -20,9 +20,4 @@ public class IndexController {
         return "index";
     }
 
-    @RequestMapping(value = "register",method = RequestMethod.GET)
-    public String register() {
-        return "register";
-    }
-
 }

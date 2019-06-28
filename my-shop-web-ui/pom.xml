@@ -62,6 +62,13 @@
         </dependency>
         <!-- Test End -->
 
+        <!-- kaptcha Begin -->
+        <dependency>
+            <groupId>com.google.code.kaptcha</groupId>
+            <artifactId>kaptcha</artifactId>
+        </dependency>
+        <!-- kaptcha End -->
+
 
     </dependencies>
 

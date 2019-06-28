@@ -15,8 +15,8 @@
             #{password,jdbcType=VARCHAR},
             #{phone,jdbcType=VARCHAR},
             #{email,jdbcType=VARCHAR},
-            #{created,jdbcType=TIMESTAMP},
-            #{updated,jdbcType=TIMESTAMP})
+            sysDate(),
+            sysDate())
      </insert>
 
 

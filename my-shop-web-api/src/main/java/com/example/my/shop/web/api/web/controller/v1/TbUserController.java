@@ -6,6 +6,7 @@ import com.example.my.shop.web.api.service.TbUserService;
 import com.example.my.shop.web.api.web.dto.TbUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -15,7 +16,7 @@ public class TbUserController {
     @Autowired
     private TbUserService tbUserService;
 
-    @RequestMapping(value = "register")
+    @RequestMapping(value = "register",method = RequestMethod.POST)
     public BaseResult register(TbUser tbUser) {
         BaseResult baseResult = BaseResult.fail("注册失败！！！");
         Boolean aBoolean = tbUserService.register(tbUser);
